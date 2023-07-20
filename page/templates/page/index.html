@@ -19,7 +19,7 @@
 
 <body>
   <main>
-    <h1>Welcome to URLShortener</h1>
+    <h1>Welcome to URLShortener!</h1>
 
     {% if url %}
     <p>Your new url is: <span class="mono bold" id="url-container">{{url}}</span> <button>Copy</button></p>
@@ -31,7 +31,9 @@
       <label for="url">Type in your URL:</label>
       <input type="url" name="url" id="url" placeholder="https://google.com" required>
 
-      <button>Send</button>
+      <div>
+        <button>Send</button>
+      </div>
     </form>
 
   </main>
