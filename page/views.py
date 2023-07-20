@@ -3,7 +3,7 @@ from django.db.models import F
 from django.http import HttpResponseBadRequest, HttpResponseRedirect
 from django.urls import reverse
 
-from api.models import Link
+from .models import Link
 
 def index(request):
     return render(request, 'page/index.html')
