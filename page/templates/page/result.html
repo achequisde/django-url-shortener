@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script defer src="{% static 'page/copyToClipboard.js' %}"></script>
+</head>
+
+<body>
+  <main>
+    <div>
+      {% comment %} Add copy button functionality (create static JS file) {% endcomment %}
+      <p>Your new url is: <span id="url-container">{{short_url}}</span> <button>Copy</button></p>
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Redirecting in 3 seconds...</title>
+
+  <meta name="author" content="Humberto Rondón">
+  <meta name="description" content="URLShortener, make your URLs more elegant.">
+
+  <meta http-equiv="refresh" content="3; url={{redirect_url}}">
+
+  <link rel="stylesheet" href="{% static 'page/main.css' %}">
+</head>
+
+<body>
+  <main>
+    <p>Redirecting in 3 seconds...</p>
+    <p>If it doesn't work, here's the link to <a href="{{redirect_url}}">{{redirect_url}}</a>.</p>
+  </main>
+</body>
+
+</html>

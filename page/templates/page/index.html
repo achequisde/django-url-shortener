@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>URLShortener</title>
+
+  <meta name="author" content="Humberto Rondón">
+  <meta name="description" content="URLShortener, make your URLs more elegant.">
+
+  <link rel="stylesheet" href="{% static 'page/main.css' %}">
+
+  <script defer src="{% static 'page/copyToClipboard.js' %}"></script>
+</head>
+
+<body>
+  <main>
+    <h1>Welcome to URLShortener</h1>
+
+    {% if url %}
+    <p>Your new url is: <span class="mono bold" id="url-container">{{url}}</span> <button>Copy</button></p>
+    {% endif %}
+
+    <form action="{% url 'page:result' %}" method="POST">
+      {% csrf_token %}
+
+      <label for="url">Type in URL</label>
+      <input type="url" name="url" id="url" required>
+
+      <button>Send</button>
+    </form>
+
+  </main>
+</body>
+
+</html>
