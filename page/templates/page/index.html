@@ -28,8 +28,8 @@
     <form action="{% url 'page:result' %}" method="POST">
       {% csrf_token %}
 
-      <label for="url">Type in URL</label>
-      <input type="url" name="url" id="url" required>
+      <label for="url">Type in your URL:</label>
+      <input type="url" name="url" id="url" placeholder="https://google.com" required>
 
       <button>Send</button>
     </form>
