@@ -9,5 +9,10 @@ URL shortener using http-refresh.
 ## How to run
 
 - Install dependencies with pipenv
-- Run `pipenv shell`
-- Start django server with `python manage.py runserver`
+- Run `pipenv shell` and then within the virtual environment:
+  
+  ```bash
+  python manage.py makemigrations
+  python manage.py migrate
+  python manage.py runserver
+  ```
